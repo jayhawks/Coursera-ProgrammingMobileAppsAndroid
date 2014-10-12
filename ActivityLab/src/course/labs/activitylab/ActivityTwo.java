@@ -27,7 +27,7 @@ public class ActivityTwo extends Activity {
 	// to count calls to onCreate(), onRestart(), onStart() and
 	// onResume(). These variables should not be defined as static.
 	
-	int mCreate, mRestart, mStart, mResume;
+	private int mCreate, mRestart, mStart, mResume;
 	
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called.
@@ -39,7 +39,7 @@ public class ActivityTwo extends Activity {
 	// named  mTvCreate, mTvRestart, mTvStart, mTvResume.
 	// for displaying the current count of each counter variable
 
-	TextView mTvCreate, mTvRestart, mTvStart, mTvResume;
+	private TextView mTvCreate, mTvRestart, mTvStart, mTvResume;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,11 @@ public class ActivityTwo extends Activity {
 		// TODO: Assign the appropriate TextViews to the TextView variables
 		// Hint: Access the TextView by calling Activity's findViewById()
 		// textView1 = (TextView) findViewById(R.id.textView1);
-
+		
+		mTvCreate = (TextView) findViewById(R.id.create);
+		mTvRestart = (TextView) findViewById(R.id.restart);
+		mTvStart = (TextView) findViewById(R.id.start);
+		mTvResume = (TextView) findViewById(R.id.resume);
 
 		
 		
@@ -65,7 +69,7 @@ public class ActivityTwo extends Activity {
 				// This function closes Activity Two
 				// Hint: use Context's finish() method
 
-				
+				finish();
 			
 			}
 		});
@@ -91,7 +95,8 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface via the displayCounts() method
 
-
+		mCreate++;
+		displayCounts();
 		
 		
 	}
@@ -109,7 +114,8 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
 
-
+		mStart++;
+		displayCounts();
 		
 		
 	}
@@ -125,7 +131,8 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
 
-
+		mResume++;
+		displayCounts();
 	
 	}
 
@@ -156,8 +163,8 @@ public class ActivityTwo extends Activity {
 		// Update the appropriate count variable
 		// Update the user interface
 
-
-	
+		mRestart++;
+		displayCounts();	
 	
 	}
 

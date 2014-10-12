@@ -3,16 +3,20 @@ package com.example.multiactivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
 public class MainActivity extends Activity {
+	
+	private static final String TAG = "MainActivity";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		Log.v(TAG, "end onCreate()");
 	}
 
 	@Override
@@ -36,6 +40,8 @@ public class MainActivity extends Activity {
 	
 	public void loadActivityTwo(View view) {
 		Intent intent = new Intent(this, ActivityTwo.class);
+		Log.v(TAG, "Right before starting activity two");
 		startActivity(intent);
+		Log.v(TAG, "After activity has been started");
 	}
 }

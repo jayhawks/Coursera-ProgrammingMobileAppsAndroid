@@ -59,10 +59,15 @@ public class ActivityTwo extends Activity {
 				// Hint: use Context's finish() method
 
 				finish();
-			
 			}
 		});
 
+//		Bundle b = getIntent().getExtras();
+//		
+//		mCreate = (Integer) b.get(CREATE_KEY);
+//		mRestart = (Integer) b.get(RESTART_KEY);
+//		mResume = (Integer) b.get(RESUME_KEY);
+//		mStart = (Integer) b.get(START_KEY);
 		// Has previous state been saved?
 		if (savedInstanceState != null) {
 

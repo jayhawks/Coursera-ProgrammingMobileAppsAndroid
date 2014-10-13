@@ -62,12 +62,6 @@ public class ActivityTwo extends Activity {
 			}
 		});
 
-//		Bundle b = getIntent().getExtras();
-//		
-//		mCreate = (Integer) b.get(CREATE_KEY);
-//		mRestart = (Integer) b.get(RESTART_KEY);
-//		mResume = (Integer) b.get(RESUME_KEY);
-//		mStart = (Integer) b.get(START_KEY);
 		// Has previous state been saved?
 		if (savedInstanceState != null) {
 
@@ -168,8 +162,6 @@ public class ActivityTwo extends Activity {
 		savedInstanceState.putInt(RESTART_KEY, mRestart);
 		savedInstanceState.putInt(RESUME_KEY, mResume);
 		savedInstanceState.putInt(START_KEY, mStart);	
-		
-		super.onSaveInstanceState(savedInstanceState);
 	}
 
 	// Updates the displayed counters

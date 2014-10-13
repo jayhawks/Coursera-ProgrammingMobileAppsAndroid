@@ -62,13 +62,6 @@ public class ActivityOne extends Activity {
 				// Create an intent stating which Activity you would like to
 				// start
 				Intent intent = new Intent(ActivityOne.this, ActivityTwo.class);
-//				Bundle b = new Bundle();
-//				b.putInt(CREATE_KEY, mCreate);
-//				b.putInt(RESTART_KEY, mRestart);
-//				b.putInt(RESUME_KEY, mResume);
-//				b.putInt(START_KEY, mStart);
-//				
-//				intent.putExtras(b);
 				
 				// Launch the Activity using the intent
 				startActivity(intent);
@@ -169,7 +162,7 @@ public class ActivityOne extends Activity {
 	public void onSaveInstanceState(Bundle savedInstanceState) {
 		// Save state information with a collection of key-value pairs
 		// 4 lines of code, one for every count variable
-		super.onSaveInstanceState(savedInstanceState);
+		//super.onSaveInstanceState(savedInstanceState);
 		
 		savedInstanceState.putInt(CREATE_KEY, mCreate);
 		savedInstanceState.putInt(RESTART_KEY, mRestart);

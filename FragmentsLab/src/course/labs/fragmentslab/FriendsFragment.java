@@ -66,7 +66,7 @@ public class FriendsFragment extends ListFragment {
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
 
-		Log.i(TAG, "Entered onActivityCreated()");
+		Log.i(TAG, "Entered onActivityCreated() in friends fragment");
 
 		// When using two-pane layout, configure the ListView to highlight the
 		// selected list item
